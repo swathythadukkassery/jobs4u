@@ -21,9 +21,9 @@ const useStyles = makeStyles({
 export default props=> {
     const [loading, setLoading] = useState(false)
     const [jobSearch, setJobSearch] = useState({
-        type: 'Full Time',
-        location: 'Remote',
-        companyName: 'Women',
+        type: '[Full Time]',
+        location: '[Remote]',
+        companyName: '[Women]',
 
     });
     const handleChange = (e) => {
@@ -44,7 +44,7 @@ export default props=> {
         <Box p={2} mt={-5} mb={2} className={classes.wrapper}>
             
 
-            <Select onChange={handleChange} value={jobSearch.type} name="type" disableUnderline variant = "filled" >
+            <Select onChange={handleChange} value={jobSearch.type} name="type" disableUnderline variant = "filled">
                 <MenuItem value="Full Time">Full Time</MenuItem>
                 <MenuItem value="Part Time">Part Time</MenuItem>
                 <MenuItem value="Contract">Contract</MenuItem>

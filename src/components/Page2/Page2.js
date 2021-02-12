@@ -9,6 +9,7 @@ import JobModel from "../Job/JobModel";
 import { firestore, app } from "../../firebase/config";
 import Alert from "../Job/Alert"
 import {Close as CloseIcon} from '@material-ui/icons';
+import ViewJob from "../Job/ViewJob";
 
 export default props => {
   const [customSearch, setCustomSearch] = useState(false);
@@ -56,6 +57,7 @@ export default props => {
     <Header openAlert={() => setNewAlertModel(true)} openModel={() => setNewJobModel(true)} />
     <JobModel closeModel={() => setNewJobModel(false)} newJobModel={newJobModel} postJob={postJob}/>
     <Alert closeAlert={() => setNewAlertModel(false)} newAlertModel={newAlertModel}/>
+    <ViewJob />
     <Box mb={4}>
     <Grid container justify="center">
         <Grid item xs={10}>
@@ -85,6 +87,12 @@ export default props => {
          
         </Grid>
     </Grid>
+    <Box mt={2} mb={2} display="flex" justifyContent="center">
+    <Button variant="contained" color="secondary"
+            disableElevation>
+      Support
+    </Button>
+    </Box>
     </Box>
      </ThemeProvider>
 };
