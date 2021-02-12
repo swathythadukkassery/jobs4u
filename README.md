@@ -9,5 +9,26 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The webpage link is : https://swathythadukkassery.github.io/jobs4u/
 
+Clone down this repository. You will need node and npm installed globally on your machine.
+
+Installation:
+
+npm install
+
+To Run Test Suite:
+
+npm test
+
+To Start Server:
+
+npm start
+
+To Visit App:
+
+localhost:3000/jobs4u
+
+The technologies implemented in this project are React, React-Router, JSX, and CSS and Firebase for database management. 
+
+The web app is forBlue Collar workers to find job in the post covid situation. There are mainly two user journeys. One type of user group is the job seeker and the other type of user group is the people and organiizations who want to post jobs. 
 
 
