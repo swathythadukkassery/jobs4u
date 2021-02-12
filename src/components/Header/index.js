@@ -28,7 +28,7 @@ export default props => {
             &nbsp;&nbsp;&nbsp;
             <Button onClick={props.openModel} variant="contained" color="primary">Post a Job</Button>
             &nbsp;&nbsp;&nbsp;
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/jobs4u/" style={{ textDecoration: 'none' }}>
         <Button variant="contained" >Home</Button>
         </Link>
             </Box>

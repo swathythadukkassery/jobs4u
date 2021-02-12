@@ -65,28 +65,28 @@ export default props => {
         <Grid container spacing={2}>
         
         <Grid container item xs={4} >
-        <Link to="/Page2" style={{ textDecoration: 'none' }}>
+        <Link to="/jobs4u/Page2" style={{ textDecoration: 'none' }}>
         <Button className={classes.btn} variant="contained" >Women Back To Work</Button>
         </Link>
             <img src={logo_size} height={300} width={400} className={classes.img}/>
         
         </Grid>
         <Grid item xs={4} >
-        <Link to="/Page2" style={{ textDecoration: 'none' }}>
+        <Link to="/jobs4u/Page2" style={{ textDecoration: 'none' }}>
             <Button className={classes.btn} variant="contained" >FireFighter</Button>
             </Link>
            <img src={cook} height={300} width={400} className={classes.img}/>
            
         </Grid>
         <Grid item xs={4} >
-        <Link to="/Page2" style={{ textDecoration: 'none' }}>
+        <Link to="/jobs4u/Page2" style={{ textDecoration: 'none' }}>
         <Button className={classes.btn} variant="contained" >IT&Technology</Button>
         </Link>
            <img src={construction} height={300} width={400} className={classes.img}/>
            
         </Grid>
         <Grid item  xs={4}>
-        <Link to="/Page2" style={{ textDecoration: 'none' }}>
+        <Link to="/jobs4u/Page2" style={{ textDecoration: 'none' }}>
         <Button className={classes.btn} 
         onClick={props.loading} 
         variant="contained" >Delivery and Driver</Button>
@@ -95,14 +95,14 @@ export default props => {
            
         </Grid>
         <Grid item xs={4} >
-        <Link to="/Page2" style={{ textDecoration: 'none' }}>
+        <Link to="/jobs4u/Page2" style={{ textDecoration: 'none' }}>
         <Button className={classes.btn} variant="contained" >Construction</Button>
         </Link>
            <img src={sw} height={300} width={400} className={classes.img}/>
            
         </Grid>
         <Grid item xs={4} >
-        <Link to="/Page2" style={{ textDecoration: 'none' }}>
+        <Link to="/jobs4u/Page2" style={{ textDecoration: 'none' }}>
         <Button className={classes.btn} variant="contained" >Call Center</Button>
         </Link>
            <img src={call} height={300} width={400} className={classes.img}/>
