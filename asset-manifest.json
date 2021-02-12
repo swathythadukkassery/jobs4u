@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jobs4u/static/css/main.69eda509.chunk.css",
-    "main.js": "/jobs4u/static/js/main.f69aac76.chunk.js",
-    "main.js.map": "/jobs4u/static/js/main.f69aac76.chunk.js.map",
+    "main.js": "/jobs4u/static/js/main.a1cbd84e.chunk.js",
+    "main.js.map": "/jobs4u/static/js/main.a1cbd84e.chunk.js.map",
     "runtime-main.js": "/jobs4u/static/js/runtime-main.fd76c135.js",
     "runtime-main.js.map": "/jobs4u/static/js/runtime-main.fd76c135.js.map",
     "static/js/2.670f26c8.chunk.js": "/jobs4u/static/js/2.670f26c8.chunk.js",
     "static/js/2.670f26c8.chunk.js.map": "/jobs4u/static/js/2.670f26c8.chunk.js.map",
     "index.html": "/jobs4u/index.html",
-    "precache-manifest.59baa726d8981ec79cd13c037d7866e2.js": "/jobs4u/precache-manifest.59baa726d8981ec79cd13c037d7866e2.js",
+    "precache-manifest.d2b4246bf4661ca49624ece93f980ab5.js": "/jobs4u/precache-manifest.d2b4246bf4661ca49624ece93f980ab5.js",
     "service-worker.js": "/jobs4u/service-worker.js",
     "static/css/main.69eda509.chunk.css.map": "/jobs4u/static/css/main.69eda509.chunk.css.map",
     "static/js/2.670f26c8.chunk.js.LICENSE.txt": "/jobs4u/static/js/2.670f26c8.chunk.js.LICENSE.txt",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.fd76c135.js",
     "static/js/2.670f26c8.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.f69aac76.chunk.js"
+    "static/js/main.a1cbd84e.chunk.js"
   ]
 }
