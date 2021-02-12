@@ -50,7 +50,7 @@ export default (props)=> {
             <Grid container alignItems="center">
             <Grid item xs>
                 <Typography variant="subtitle1">{props.title}</Typography>
-                <Typography className={classes.companyName} variant="subtitle1">{props.companyName}</Typography>
+                <Typography className={classes.companyName} variant="subtitle1">{props.companyURL}</Typography>
             </Grid>
             <Grid item container xs>
             {props.skills.map((skill) => (

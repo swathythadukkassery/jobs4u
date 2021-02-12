@@ -1,5 +1,5 @@
-import React from 'react';
-import {Box, Select, MenuItem, Button, makeStyles, FilledInput, Grid} from '@material-ui/core'
+import React, { useState } from 'react';
+import {Box, Select, MenuItem, Button, makeStyles, FilledInput, Grid, CircularProgress} from '@material-ui/core'
 
 const useStyles = makeStyles({
     wrapper:{
@@ -19,37 +19,55 @@ const useStyles = makeStyles({
 })
 
 export default props=> {
+    const [loading, setLoading] = useState(false)
+    const [jobSearch, setJobSearch] = useState({
+        type: 'Full Time',
+        location: 'Remote',
+        companyName: 'Women',
+
+    });
+    const handleChange = (e) => {
+        e.persist();
+        setJobSearch(oldState =>(
+            { ...oldState, [e.target.name] : [e.target.value]}));
+    };
+    
+    const search = async ()=>{
+        setLoading(true);
+        await props.fetchJobsCustom(jobSearch);
+        setLoading(false);
+    }
+
     const classes = useStyles();
-    const skills = [
-        "Python",
-        "JS",
-        "React",
-        "Azure",
-        "Firebase",
-        "English"
-    ];
+    
     return (
         <Box p={2} mt={-5} mb={2} className={classes.wrapper}>
             
 
-            <Select disableUnderline variant = "filled" defaultValue="Full Time">
+            <Select onChange={handleChange} value={jobSearch.type} name="type" disableUnderline variant = "filled" >
                 <MenuItem value="Full Time">Full Time</MenuItem>
                 <MenuItem value="Part Time">Part Time</MenuItem>
                 <MenuItem value="Contract">Contract</MenuItem>
             </Select>
-            <Select disableUnderline variant = "filled" defaultValue="Remote">
+            <Select onChange={handleChange} value={jobSearch.location} name="location" disableUnderline variant = "filled" >
                 <MenuItem value="Remote">Remote</MenuItem>
                 <MenuItem value="In-Office">In-Office</MenuItem>
             </Select>
-            <Select disableUnderline variant = "filled" defaultValue="Women Back To Work">
-                <MenuItem value="Women Back To Work">Women Back To Work</MenuItem>
+            <Select onChange={handleChange} value={jobSearch.companyName} name="companyName" disableUnderline variant = "filled" >
+                <MenuItem value="Women">Women</MenuItem>
                 <MenuItem value="IT&Technology">IT&Technology</MenuItem>
                 <MenuItem value="Sales&Retail">Sales&Retail</MenuItem>
                 <MenuItem value="Cook">Cook</MenuItem>
                 <MenuItem value="Driver">Driver</MenuItem>
                 <MenuItem value="Technician">Technician</MenuItem>
             </Select>
-            <Button variant="contained" color="primary">Search</Button>
+            <Button disabled={loading} 
+            variant="contained" color="primary"
+            disableElevation
+            onClick={search}>
+            {loading? (<CircularProgress color="secondary" size={22}/>)
+                        : ("Search"
+                        )}</Button>
             
         </Box>
 

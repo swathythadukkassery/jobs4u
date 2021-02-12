@@ -36,18 +36,18 @@ const useStyles = makeStyles((theme)=>({
     }
 }))
 
+const initState = {title: "",
+type: "[Full Time]",
+companyName: "[Women]",
+companyURL : "",
+location : "[Remote]",
+link : "",
+description : "",
+skills: [],}
+
 export default (props) =>{
     const [loading, setLoading] = useState(false)
-    const [jobDetails, setJobDetails] = useState({
-        title: "",
-        type: "Full Time",
-        companyName: "",
-        companyURL : "",
-        location : "Remote",
-        link : "",
-        description : "",
-        skills: []
-    })
+    const [jobDetails, setJobDetails] = useState(initState);
 
     const handleChange = e => {
         e.persist();
@@ -64,19 +64,28 @@ export default (props) =>{
     
     const handleSubmit = async () =>
     {
+        for (const field in jobDetails){
+           if(typeof jobDetails[field]== 'string' && !jobDetails[field]) return;
+        }
         setLoading(true);
         await props.postJob(jobDetails);
-        setLoading(false);
+        closeModel();
+    }
+
+    const closeModel = () =>{
+        setJobDetails(initState)
+        setLoading(false)
+        props.closeModel();
     }
   
     const classes = useStyles();
     const skills = [
-        "Python",
-        "JS",
-        "React",
-        "Azure",
-        "Firebase",
-        "English"
+        "English",
+        "TeamWork",
+        "ProblemSolving",
+        "BasicMaths",
+        "WebDev",
+        "Communication",
     ];
 
     return(
@@ -85,7 +94,7 @@ export default (props) =>{
                 <Box display="flex" justifyContent="space-between"
                 alignItems="center">
                 Post Job
-                <IconButton onClick={props.closeModel}>
+                <IconButton onClick={closeModel}>
                     <CloseIcon/>
                 </IconButton>
                 </Box>
@@ -106,7 +115,7 @@ export default (props) =>{
                     onChange={handleChange}
                     name = "type"
                     value = {jobDetails.type}
-                    fullWidth disableUnderline variant = "filled" >
+                    fullWidth disableUnderline variant = "filled" defaultValue="Full Time">
                         <MenuItem value="Full Time">Full Time</MenuItem>
                         <MenuItem value="Part Time">Part Time</MenuItem>
                         <MenuItem value="Contract">Contract</MenuItem>
@@ -114,12 +123,20 @@ export default (props) =>{
 
                     </Grid>
                     <Grid item xs={6}>
-                        <FilledInput
+                        <Select 
                         onChange={handleChange}
                         name = "companyName"
-                        autoComplete='off'
                         value = {jobDetails.companyName}
-                        placeholder="Company Name*" disableUnderline fullWidth/>
+                        fullWidth
+                        disableUnderline variant = "filled">
+                <MenuItem value="Women">Women</MenuItem>
+                <MenuItem value="IT&Technology">IT&Technology</MenuItem>
+                <MenuItem value="Sales&Retail">Sales&Retail</MenuItem>
+                <MenuItem value="Cook">Cook</MenuItem>
+                <MenuItem value="Driver">Driver</MenuItem>
+                <MenuItem value="Technician">Technician</MenuItem>
+                
+            </Select>
 
                     </Grid>
                     <Grid item xs={6}>
@@ -128,7 +145,7 @@ export default (props) =>{
                         name = "companyURL"
                         autoComplete='off'
                         value = {jobDetails.companyURL}
-                        placeholder="Company URL*" disableUnderline fullWidth/>
+                        placeholder="Company Name*" disableUnderline fullWidth/>
 
                     </Grid>
                     <Grid item xs={6}>
