@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f2aa4ce22733e95a3a3e04841fea8e2",
+    "revision": "b8df8c4ce617909242852631f8c1cb75",
     "url": "/jobs4u/index.html"
   },
   {
-    "revision": "f184d4986f3883372921",
+    "revision": "e8ecc9df68f84fd86bb4",
     "url": "/jobs4u/static/css/main.69eda509.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jobs4u/static/js/2.670f26c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f184d4986f3883372921",
-    "url": "/jobs4u/static/js/main.9cdf8750.chunk.js"
+    "revision": "e8ecc9df68f84fd86bb4",
+    "url": "/jobs4u/static/js/main.ab54bd42.chunk.js"
   },
   {
     "revision": "6edb5504cb472f7250c2",
