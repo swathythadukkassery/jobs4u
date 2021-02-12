@@ -13,5 +13,6 @@ export default () => {
   
   return <ThemeProvider theme = {theme}>
     <Page1/>
+
      </ThemeProvider>
 };

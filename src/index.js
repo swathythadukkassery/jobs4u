@@ -8,9 +8,9 @@ import Page2 from "./components/Page2/Page2";
 ReactDOM.render(
     <BrowserRouter>
        <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/Page1" component={Page1} />
-        <Route path="/Page2" component={Page2} />
+        <Route exact path="/jobs4u/" component={App} />
+        <Route path="/jobs4u/Page1" component={Page1} />
+        <Route path="/jobs4u/Page2" component={Page2} />
       </Switch>
       </BrowserRouter>
     , document.getElementById("root"));
