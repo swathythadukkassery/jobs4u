@@ -1,6 +1,6 @@
 This project is developed using React and Firebase.
 
-##Pitch : https://drive.google.com/file/d/1PL4bENDTYjsyS_v8hIAmpwPiKDr02NC5/view?usp=sharing
+##Pitch : https://drive.google.com/file/d/1PL4bENDTYjsyS_v8hIAmpwPiKDr02NC5/view?usp=sharing <br />
 ##Screen recording : https://drive.google.com/file/d/1bZI_fzZtMBc32UWSakLucG154fF5rFU8/view?usp=drivesdk
 ## Available Scripts
 
@@ -30,5 +30,5 @@ localhost:3000/jobs4u
 The technologies implemented in this project are React, React-Router, JSX, and CSS and Firebase for database management. 
 
 The web app is forBlue Collar workers to find job in the post covid situation. There are mainly two user journeys. One type of user group is the job seeker and the other type of user group is the people and organiizations who want to post jobs. 
-
+The site allows users to create personalised alerts. They can receive alert either through their email or as text message.(Not fully functional, just a demo can be experienced).
 
