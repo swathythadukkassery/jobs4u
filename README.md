@@ -1,7 +1,7 @@
 This project is developed using React and Firebase.
 
-##Pitch : https://youtu.be/LAbkz1niNos <br />
-##Screen recording : https://drive.google.com/file/d/1bZI_fzZtMBc32UWSakLucG154fF5rFU8/view?usp=drivesdk
+## Pitch : https://youtu.be/LAbkz1niNos <br />
+## Screen recording : https://drive.google.com/file/d/1bZI_fzZtMBc32UWSakLucG154fF5rFU8/view?usp=drivesdk
 ## Available Scripts
 
 To run the app in the development mode.<br />
